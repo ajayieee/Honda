@@ -9,7 +9,207 @@
 </head>
 
 <body>
-    <h1>efheshf</h1>
+    <header>
+        <div class="container">
+            <div class="header_menu">
+                <div class="header_left">
+                    <div class="header_logo">
+
+                        <a href="#">
+                            <img src="assets/img/logo-honda.png" alt="honda-logo">
+                        </a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="">AUTOMOBILES <img src="assets/img/dropdown-arrow.svg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="">MOTORCYCLES <img src="assets/img/dropdown-arrow.svg" alt=""></a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+                <div class="header_right">
+                    <a href="#" class="header__language">العربية</a>
+                    <span class="header_divider"></span>
+                    <button class="header_search">
+                        <img src="assets/img/search.svg" alt="Search">
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="heroSection">
+        <img class="hero_banner" src="assets/img/honda-banner.jpg" alt="">
+        <div class="hero_contain">
+            <div class="container">
+                <div class="hero_content">
+                    <div class="heroSection_left">
+                        <h2>
+                            See how much you’ll<br>
+                            Save with Honda
+                        </h2>
+                    </div>
+
+                    <div class="heroSection_right">
+                        <p>
+                            When it comes to owning a car, the real cost goes beyond
+                            the sticker price. Honda vehicles are built to last, with
+                            lower maintenance costs, better fuel economy, and strong
+                            resale value — all adding up to major savings over time.
+                        </p>
+                        <br><br>
+                        <p>
+                            Compare your favorite Honda model with similar cars
+                            from other brands and see how choosing Honda is a
+                            smarter financial decision over the next 10 years.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="drivingSection">
+        <div class="container">
+            <div class="drivingSection_top">
+
+                <div class="drivingSection_distance">
+                    <h6>Estimate your driving distance</h6>
+                    <h5><span id="distanceValue">0</span> km</h5>
+                </div>
+
+                <div class="drivingSection_slider">
+
+                    <div class="drivingSection_mark">
+                        ADJUST THE SLIDER
+                    </div>
+
+                    <input type="range" min="0" max="1000000" value="0" step="50000" id="distanceSlider">
+
+                    <div class="drivingSection_labels">
+                        <span>0</span>
+                        <span>50,000</span>
+                        <span>100,000</span>
+                        <span>250,000</span>
+                        <span>500,000</span>
+                        <span>1M+</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="drivingSection_comparison">
+
+                <!-- Instruction -->
+                <div class="drivingSection_instruction">
+                    <p>
+                        Start your comparison by adding a honda vehicle here
+                    </p>
+                    <img src="assets/img/right-arrow2.svg" alt="">
+                </div>
+                <div class="vehicleCards">
+                    <div class="vehicleCard vehicleCard_active">
+
+                        <select name="vehicle" id="vehicle" class="vehicleCard_select">
+                            <option value="" selected disabled>Add a vehicle</option>
+                            <option value="honda-city">Honda City</option>
+                            <option value="honda-amaze">Honda Amaze</option>
+                            <option value="honda-elevate">Honda Elevate</option>
+                            <option value="honda-civic">Honda Civic</option>
+                        </select>
+
+                        <div class="vehicleCard_image">
+                            <img src="assets/img/car-comparison.svg" alt="Vehicle">
+                        </div>
+                    </div>
+                    <div class="vehicleCard ">
+
+                        <select name="vehicle" id="vehicle" class="vehicleCard_select">
+                            <option value="" selected disabled>Add a vehicle</option>
+                            <option value="honda-city">Honda City</option>
+                            <option value="honda-amaze">Honda Amaze</option>
+                            <option value="honda-elevate">Honda Elevate</option>
+                            <option value="honda-civic">Honda Civic</option>
+                        </select>
+
+                        <div class="vehicleCard_image">
+                            <img src="assets/img/car-comparison.svg" alt="Vehicle">
+                        </div>
+                    </div>
+                    <div class="vehicleCard ">
+
+                        <select name="vehicle" id="vehicle" class="vehicleCard_select">
+                            <option value="" selected disabled>Add a vehicle</option>
+                            <option value="honda-city">Honda City</option>
+                            <option value="honda-amaze">Honda Amaze</option>
+                            <option value="honda-elevate">Honda Elevate</option>
+                            <option value="honda-civic">Honda Civic</option>
+                        </select>
+
+                        <div class="vehicleCard_image">
+                            <img src="assets/img/car-comparison.svg" alt="Vehicle">
+                        </div>
+                    </div>
+                    <div class="vehicleCard ">
+
+                        <select name="vehicle" id="vehicle" class="vehicleCard_select">
+                            <option value="" selected disabled>Add a vehicle</option>
+                            <option value="honda-city">Honda City</option>
+                            <option value="honda-amaze">Honda Amaze</option>
+                            <option value="honda-elevate">Honda Elevate</option>
+                            <option value="honda-civic">Honda Civic</option>
+                        </select>
+
+                        <div class="vehicleCard_image">
+                            <img src="assets/img/car-comparison.svg" alt="Vehicle">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="subscribeSection">
+        <div class="container">
+
+            <div class="subscribeSection_content">
+
+                <!-- Left -->
+                <div class="subscribeSection_info">
+                    <img src="assets/img/envelope.png" alt="">
+
+                    <span>Stay up-to-date with Honda</span>
+                </div>
+
+                <!-- Form -->
+                <form class="subscribeSection_form">
+
+                    <input type="text" placeholder="FULL NAME">
+
+                    <input type="email" placeholder="EMAIL ADDRESS">
+
+                    <button type="submit">
+                        SUBSCRIBE NOW
+                        <img src="assets/img/right-arrow-white.png" alt="">
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer><div class="container"></div></footer>
 </body>
 
 </html>
