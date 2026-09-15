@@ -117,58 +117,64 @@
                 <div class="vehicleCards">
                     <div class="vehicleCard vehicleCard_active">
 
-                        <select name="vehicle" id="vehicle" class="vehicleCard_select">
-                            <option value="" selected disabled>Add a vehicle</option>
-                            <option value="honda-city">Honda City</option>
-                            <option value="honda-amaze">Honda Amaze</option>
-                            <option value="honda-elevate">Honda Elevate</option>
-                            <option value="honda-civic">Honda Civic</option>
-                        </select>
+                        <button class="vehicleCard_select">Add a vehicle <img src="assets/img/dropdown-arrow-black.svg"
+                                alt=""></button>
 
                         <div class="vehicleCard_image">
-                            <img src="assets/img/car-comparison.svg" alt="Vehicle">
+                            <img class="carImage carImage_default" src="assets/img/car-comparison.svg" alt="Vehicle">
+                            <img class="carImage carImage_hover" src="assets/img/hover-car.svg" alt="">
                         </div>
                     </div>
                     <div class="vehicleCard ">
 
-                        <select name="vehicle" id="vehicle" class="vehicleCard_select">
+                        <!-- <select name="vehicle" id="vehicle" class="vehicleCard_select">
                             <option value="" selected disabled>Add a vehicle</option>
                             <option value="honda-city">Honda City</option>
                             <option value="honda-amaze">Honda Amaze</option>
                             <option value="honda-elevate">Honda Elevate</option>
                             <option value="honda-civic">Honda Civic</option>
-                        </select>
+                        </select> -->
+                        <button class="vehicleCard_select">Add a vehicle <img src="assets/img/dropdown-arrow-black.svg"
+                                alt=""></button>
 
                         <div class="vehicleCard_image">
-                            <img src="assets/img/car-comparison.svg" alt="Vehicle">
+                            <img class="carImage carImage_default" src="assets/img/car-comparison.svg" alt="Vehicle">
+                            <img class="carImage carImage_hover" src="assets/img/hover-car.svg" alt="">
                         </div>
                     </div>
                     <div class="vehicleCard ">
 
-                        <select name="vehicle" id="vehicle" class="vehicleCard_select">
+                        <!-- <select name="vehicle" id="vehicle" class="vehicleCard_select">
                             <option value="" selected disabled>Add a vehicle</option>
                             <option value="honda-city">Honda City</option>
                             <option value="honda-amaze">Honda Amaze</option>
                             <option value="honda-elevate">Honda Elevate</option>
                             <option value="honda-civic">Honda Civic</option>
-                        </select>
+                        </select> -->
+
+                        <button class="vehicleCard_select">Add a vehicle <img src="assets/img/dropdown-arrow-black.svg"
+                                alt=""></button>
 
                         <div class="vehicleCard_image">
-                            <img src="assets/img/car-comparison.svg" alt="Vehicle">
+                            <img class="carImage carImage_default" src="assets/img/car-comparison.svg" alt="Vehicle">
+                            <img class="carImage carImage_hover" src="assets/img/hover-car.svg" alt="">
                         </div>
                     </div>
                     <div class="vehicleCard ">
 
-                        <select name="vehicle" id="vehicle" class="vehicleCard_select">
+                        <!-- <select name="vehicle" id="vehicle" class="vehicleCard_select">
                             <option value="" selected disabled>Add a vehicle</option>
                             <option value="honda-city">Honda City</option>
                             <option value="honda-amaze">Honda Amaze</option>
                             <option value="honda-elevate">Honda Elevate</option>
                             <option value="honda-civic">Honda Civic</option>
-                        </select>
+                        </select> -->
+                        <button class="vehicleCard_select">Add a vehicle <img src="assets/img/dropdown-arrow-black.svg"
+                                alt=""></button>
 
                         <div class="vehicleCard_image">
-                            <img src="assets/img/car-comparison.svg" alt="Vehicle">
+                            <img class="carImage carImage_default" src="assets/img/car-comparison.svg" alt="Vehicle">
+                            <img class="carImage carImage_hover" src="assets/img/hover-car.svg" alt="">
                         </div>
                     </div>
 
@@ -181,35 +187,294 @@
     <section class="subscribeSection">
         <div class="container">
 
-            <div class="subscribeSection_content">
+            <div class=" footer_container">
 
-                <!-- Left -->
-                <div class="subscribeSection_info">
-                    <img src="assets/img/envelope.png" alt="">
+                <div class="subscribeSection_content">
 
-                    <span>Stay up-to-date with Honda</span>
+                    <!-- Left -->
+                    <div class="subscribeSection_info">
+                        <img src="assets/img/envelope.png" alt="">
+
+                        <span>Stay up-to-date with Honda</span>
+                    </div>
+
+                    <!-- Form -->
+                    <form class="subscribeSection_form">
+
+                        <input type="text" placeholder="FULL NAME">
+
+                        <input type="email" placeholder="EMAIL ADDRESS">
+
+                        <button type="submit">
+                            SUBSCRIBE NOW
+                            <img src="assets/img/right-arrow-white.png" alt="">
+                        </button>
+
+                    </form>
+
                 </div>
-
-                <!-- Form -->
-                <form class="subscribeSection_form">
-
-                    <input type="text" placeholder="FULL NAME">
-
-                    <input type="email" placeholder="EMAIL ADDRESS">
-
-                    <button type="submit">
-                        SUBSCRIBE NOW
-                        <img src="assets/img/right-arrow-white.png" alt="">
-                    </button>
-
-                </form>
-
             </div>
         </div>
 
     </section>
 
-    <footer><div class="container"></div></footer>
+
+    <!-- Add Vehicle Popup -->
+    <div class="vehicleModal" id="vehicleModal">
+
+        <div class="vehicleModal_overlay"></div>
+
+        <div class="vehicleModal_content">
+
+            <button class="vehicleModal_close" id="vehicleModalClose" aria-label="Close">
+                &times;
+            </button>
+
+            <h2>Add a Honda vehicle</h2>
+
+            <form class="vehicleModal_form">
+
+                <!-- Model -->
+                <div class="vehicleModal_field">
+                    <label for="vehicleModel">Model</label>
+
+                    <div class="vehicleModal_select">
+                        <select id="vehicleModel">
+                            <option value="" selected disabled>
+                                Select option
+                            </option>
+                            <option value="city">Honda City</option>
+                            <option value="elevate">Honda Elevate</option>
+                            <option value="amaze">Honda Amaze</option>
+                            <option value="civic">Honda Civic</option>
+                        </select>
+
+                        <span class="select_arrow">⌄</span>
+                    </div>
+                </div>
+
+
+                <!-- Year -->
+                <div class="vehicleModal_field">
+                    <label for="vehicleYear">Year</label>
+
+                    <div class="vehicleModal_select">
+                        <select id="vehicleYear">
+                            <option value="" selected disabled>
+                                Select option
+                            </option>
+                            <option value="2026">2026</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                        </select>
+
+                        <span class="select_arrow">⌄</span>
+                    </div>
+                </div>
+
+
+                <!-- Trim -->
+                <div class="vehicleModal_field">
+                    <label for="vehicleTrim">Trim</label>
+
+                    <div class="vehicleModal_select">
+                        <select id="vehicleTrim">
+                            <option value="" selected disabled>
+                                Select option
+                            </option>
+                            <option value="base">Base</option>
+                            <option value="v">V</option>
+                            <option value="vx">VX</option>
+                            <option value="zx">ZX</option>
+                        </select>
+
+                        <span class="select_arrow">⌄</span>
+                    </div>
+                </div>
+
+
+                <button type="button" class="vehicleModal_submit">
+                    Add Vehicle
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer_container">
+                <div class="footer_top">
+                    <div class="footer_column automobiles">
+                        <h5>AUTOMOBILES</h4>
+
+                            <ul>
+                                <li><a href="#">All New Accord e:HEV</a></li>
+                                <li><a href="#">All New Accord 1.5L</a></li>
+                                <li><a href="#">Honda All New Jazz</a></li>
+                                <li><a href="#">All New CR-V</a></li>
+                                <li><a href="#">Honda Civic Type-R</a></li>
+                                <li><a href="#">Honda Civic</a></li>
+                                <li><a href="#">All New Honda City</a></li>
+                                <li><a href="#">Honda ZR-V</a></li>
+                                <li><a href="#">Honda HR-V</a></li>
+                                <li><a href="#">Honda Odyssey</a></li>
+                            </ul>
+                    </div>
+                    <div class="footer_column about">
+                        <div class="footer_group">
+                            <h5>ABOUT</h5>
+
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Honda History</a></li>
+                            </ul>
+                        </div>
+
+                        <div class=" other_brands">
+                            <h5>OTHER BRANDS</h5>
+
+                            <ul>
+                                <li><a href="#">Motorcycles</a></li>
+                                <li><a href="#">Power Products</a></li>
+                                <li><a href="#">Honda Marine</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_column safety">
+                        <div class="footer_group">
+                            <h5>SAFETY</h5>
+
+                            <ul>
+                                <li><a href="#">Safety At Honda</a></li>
+                                <li><a href="#">Honda SENSING®</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="technology">
+                            <h5>TECHNOLOGY</h5>
+
+                            <ul>
+                                <li><a href="#">Technology at Honda</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_column usefulLinks">
+                        <h5>USEFUL LINKS</h5>
+
+                        <ul>
+                            <li><a href="#">Honda Worldwide</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_social">
+                    <div class="footer_all followUs ">
+                        <h5>FOLLOW US</h5>
+                        <div class="social_links">
+                            <a href="#"><img src="assets/img/facebook.svg" alt=""></a>
+                            <a href="#"><img src="assets/img/instagram.svg" alt=""></a>
+                            <a href="#"><img src="assets/img/youtube.svg" alt=""></a>
+                            <a href="#"><img src="assets/img/linkedin.svg" alt=""></a>
+                        </div>
+                        <p>
+                            ©All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="footer_all honda_racing">
+                        <h5>HONDA RACING CORPORATION</h5>
+                        <div class="social_links">
+                            <a href="#"><img src="assets/img/facebook.svg" alt=""></a>
+                            <a href="#"><img src="assets/img/instagram.svg" alt=""></a>
+                            <a href="#"><img src="assets/img/youtube.svg" alt=""></a>
+
+                        </div>
+                        <a href="#">
+                            <img src="assets/img/drop-up.svg" alt="">
+                            BACK TO TOP
+                        </a>
+                    </div>
+                    <div class="footer_all honda_global">
+                        <h5>HONDA RACING GLOBAL</h5>
+                        <div class="social_links">
+                            <a href="#"><img src="assets/img/twitter.svg" alt=""></a>
+                            <a href="#"><img src="assets/img/facebook.svg" alt=""></a>
+                            <a href="#"><img src="assets/img/instagram.svg" alt=""></a>
+                            <a href="#"><img src="assets/img/youtube.svg" alt=""></a>
+
+                        </div>
+                        <a class="privacy" href="#">
+                            Privacy Policy
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+<script>
+    const vehicleModal = document.getElementById("vehicleModal");
+    const vehicleModalClose = document.getElementById("vehicleModalClose");
+
+    // All Add a vehicle buttons
+    const vehicleButtons = document.querySelectorAll(".vehicleCard_select");
+
+
+    // Open popup
+    vehicleButtons.forEach((button) => {
+
+        button.addEventListener("click", () => {
+
+            vehicleModal.classList.add("active");
+
+            // Prevent background scrolling
+            document.body.style.overflow = "hidden";
+
+        });
+
+    });
+
+
+    // Close popup
+    vehicleModalClose.addEventListener("click", () => {
+
+        vehicleModal.classList.remove("active");
+
+        document.body.style.overflow = "";
+
+    });
+
+
+    // Close when clicking outside modal
+    vehicleModal.addEventListener("click", (event) => {
+
+        if (event.target === vehicleModal ||
+            event.target.classList.contains("vehicleModal_overlay")) {
+
+            vehicleModal.classList.remove("active");
+
+            document.body.style.overflow = "";
+
+        }
+
+    });
+
+
+    // Close with ESC key
+    document.addEventListener("keydown", (event) => {
+
+        if (event.key === "Escape") {
+
+            vehicleModal.classList.remove("active");
+
+            document.body.style.overflow = "";
+
+        }
+
+    });
+</script>
 </body>
 
 </html>
