@@ -249,7 +249,7 @@
                             <option value="civic">Honda Civic</option>
                         </select>
 
-                        <span class="select_arrow">⌄</span>
+                        <img class="select_arrow" src="assets/img/dropdown-arrow-black.svg" alt="">
                     </div>
                 </div>
 
@@ -269,7 +269,8 @@
                             <option value="2023">2023</option>
                         </select>
 
-                        <span class="select_arrow">⌄</span>
+                        <img class="select_arrow" src="assets/img/dropdown-arrow-black.svg" alt="">
+
                     </div>
                 </div>
 
@@ -288,8 +289,8 @@
                             <option value="vx">VX</option>
                             <option value="zx">ZX</option>
                         </select>
+                        <img class="select_arrow" src="assets/img/dropdown-arrow-black.svg" alt="">
 
-                        <span class="select_arrow">⌄</span>
                     </div>
                 </div>
 
@@ -414,67 +415,8 @@
         </div>
     </footer>
 
-<script>
-    const vehicleModal = document.getElementById("vehicleModal");
-    const vehicleModalClose = document.getElementById("vehicleModalClose");
+    <script src="assets/js/modal.js"></script>
 
-    // All Add a vehicle buttons
-    const vehicleButtons = document.querySelectorAll(".vehicleCard_select");
-
-
-    // Open popup
-    vehicleButtons.forEach((button) => {
-
-        button.addEventListener("click", () => {
-
-            vehicleModal.classList.add("active");
-
-            // Prevent background scrolling
-            document.body.style.overflow = "hidden";
-
-        });
-
-    });
-
-
-    // Close popup
-    vehicleModalClose.addEventListener("click", () => {
-
-        vehicleModal.classList.remove("active");
-
-        document.body.style.overflow = "";
-
-    });
-
-
-    // Close when clicking outside modal
-    vehicleModal.addEventListener("click", (event) => {
-
-        if (event.target === vehicleModal ||
-            event.target.classList.contains("vehicleModal_overlay")) {
-
-            vehicleModal.classList.remove("active");
-
-            document.body.style.overflow = "";
-
-        }
-
-    });
-
-
-    // Close with ESC key
-    document.addEventListener("keydown", (event) => {
-
-        if (event.key === "Escape") {
-
-            vehicleModal.classList.remove("active");
-
-            document.body.style.overflow = "";
-
-        }
-
-    });
-</script>
 </body>
 
 </html>

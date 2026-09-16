@@ -390,16 +390,16 @@ header .header_menu .header_right .header_search img {
   left: 0;
   opacity: 0;
 }
-.drivingSection .drivingSection_comparison .vehicleCards .vehicleCard:hover .vehicleCard_image .carImage_default {
-  opacity: 0;
-}
-.drivingSection .drivingSection_comparison .vehicleCards .vehicleCard:hover .vehicleCard_image .carImage_hover {
-  opacity: 1;
-}
 .drivingSection .drivingSection_comparison .vehicleCards .vehicleCard_active {
   background: #fff;
   border: 1px solid #e0e0e1;
   border-bottom: 1px solid #e00000;
+}
+.drivingSection .drivingSection_comparison .vehicleCards .vehicleCard_active:hover .vehicleCard_image .carImage_default {
+  opacity: 0;
+}
+.drivingSection .drivingSection_comparison .vehicleCards .vehicleCard_active:hover .vehicleCard_image .carImage_hover {
+  opacity: 1;
 }
 
 .subscribeSection {
@@ -597,12 +597,12 @@ footer .footer_container .footer_social .honda_global .privacy {
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-.vehicleModal_overlay {
+.vehicleModal .vehicleModal_overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
 }
-.vehicleModal_content {
+.vehicleModal .vehicleModal_content {
   position: relative;
   z-index: 2;
   width: 100%;
@@ -620,7 +620,7 @@ footer .footer_container .footer_social .honda_global .privacy {
 .vehicleModal.active .vehicleModal_content {
   transform: translateY(0);
 }
-.vehicleModal_close {
+.vehicleModal .vehicleModal_close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -640,7 +640,7 @@ footer .footer_container .footer_social .honda_global .privacy {
   cursor: pointer;
   transition: color 0.2s ease;
 }
-.vehicleModal_close:hover {
+.vehicleModal .vehicleModal_close:hover {
   color: #000;
 }
 .vehicleModal h2 {
@@ -650,13 +650,13 @@ footer .footer_container .footer_social .honda_global .privacy {
   line-height: 1.2;
   font-weight: 400;
 }
-.vehicleModal_form {
+.vehicleModal .vehicleModal_form {
   width: 100%;
 }
-.vehicleModal_field {
+.vehicleModal .vehicleModal_field {
   margin-bottom: 12px;
 }
-.vehicleModal_field label {
+.vehicleModal .vehicleModal_field label {
   display: block;
   margin-bottom: 5px;
   color: #222;
@@ -705,15 +705,15 @@ footer .footer_container .footer_social .honda_global .privacy {
   margin-top: 11px;
   border: none;
   outline: none;
-  background: #dedede;
-  color: #999;
+  background: #000;
+  color: #fff;
   font-family: inherit;
   font-size: 11px;
   font-weight: 400;
-  cursor: not-allowed;
+  cursor: pointer;
 }
 @media (max-width: 500px) {
-  .vehicleModal_content {
+  .vehicleModal .vehicleModal_content {
     max-width: 100%;
     padding: 28px 25px 30px;
   }
