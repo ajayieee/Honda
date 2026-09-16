@@ -3,7 +3,7 @@ const vehicleModal = document.getElementById("vehicleModal");
 const vehicleModalClose = document.getElementById("vehicleModalClose");
 
 // All Add a vehicle buttons
-const vehicleButtons = document.querySelectorAll(".vehicleCard_select");
+const vehicleButtons = document.querySelectorAll(".vehicleCard");
 
 
 // Open popup
