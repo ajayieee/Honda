@@ -55,6 +55,12 @@ header .header_menu .header_left .header_logo a img {
   height: 100%;
   object-fit: contain;
 }
+@media (max-width: 460px) {
+  header .header_menu .header_left .header_logo a img {
+    max-width: 200px;
+    width: 100%;
+  }
+}
 header .header_menu .header_left nav ul {
   display: flex;
   list-style: none;
@@ -118,6 +124,32 @@ header .header_menu .header_right .header_search img {
     display: none;
   }
 }
+header .header_menu .header_right .hamburger {
+  display: none;
+  width: 35px;
+  height: 35px;
+  padding: 7px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+header .header_menu .header_right .hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #f7f7fb;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+@media (max-width: 800px) {
+  header .header_menu .header_right .hamburger {
+    display: flex;
+  }
+}
 
 .heroSection {
   position: relative;
@@ -171,6 +203,12 @@ header .header_menu .header_right .header_search img {
   .heroSection .hero_contain .hero_content .heroSection_left h2 {
     color: #000;
     padding: 40px 0;
+    font-size: 60px;
+  }
+}
+@media (max-width: 560px) {
+  .heroSection .hero_contain .hero_content .heroSection_left h2 {
+    font-size: 40px;
   }
 }
 .heroSection .hero_contain .hero_content .heroSection_right {
@@ -189,49 +227,50 @@ header .header_menu .header_right .header_search img {
 @media (max-width: 1000px) {
   .heroSection .hero_contain .hero_content .heroSection_right p {
     color: #000;
+    font-size: 15px;
   }
 }
 
-.drivingSection {
+.sliderSection {
   padding: 68px 0;
 }
-.drivingSection .drivingSection_top {
+.sliderSection .drivingSection_top {
   display: flex;
   align-items: flex-start;
   margin-bottom: 45px;
   gap: 77px;
 }
 @media (max-width: 850px) {
-  .drivingSection .drivingSection_top {
+  .sliderSection .drivingSection_top {
     flex-direction: column;
   }
 }
-.drivingSection .drivingSection_top .drivingSection_distance h6 {
+.sliderSection .drivingSection_top .drivingSection_distance h6 {
   font-size: 16px;
   color: #000;
   line-height: 1.4;
   font-weight: 300;
 }
-.drivingSection .drivingSection_top .drivingSection_distance h5 {
+.sliderSection .drivingSection_top .drivingSection_distance h5 {
   font-size: 32px;
   color: #000;
   font-weight: 200;
 }
-.drivingSection .drivingSection_top .drivingSection_distance h5 span {
+.sliderSection .drivingSection_top .drivingSection_distance h5 span {
   font-size: 48px;
 }
-.drivingSection .drivingSection_top .drivingSection_slider {
+.sliderSection .drivingSection_top .drivingSection_slider {
   position: relative;
   flex: 1;
   padding-top: 10px;
 }
 @media (max-width: 850px) {
-  .drivingSection .drivingSection_top .drivingSection_slider {
+  .sliderSection .drivingSection_top .drivingSection_slider {
     width: 80%;
     margin: auto;
   }
 }
-.drivingSection .drivingSection_top .drivingSection_slider input[type=range] {
+.sliderSection .drivingSection_top .drivingSection_slider input[type=range] {
   width: 100%;
   height: 4px;
   margin: 0;
@@ -241,7 +280,7 @@ header .header_menu .header_right .header_search img {
   border-radius: 0;
   cursor: pointer;
 }
-.drivingSection .drivingSection_top .drivingSection_slider input[type=range]::-webkit-slider-thumb {
+.sliderSection .drivingSection_top .drivingSection_slider input[type=range]::-webkit-slider-thumb {
   appearance: none;
   -webkit-appearance: none;
   width: 12px;
@@ -251,7 +290,7 @@ header .header_menu .header_right .header_search img {
   background: #d90000;
   cursor: pointer;
 }
-.drivingSection .drivingSection_top .drivingSection_slider input[type=range]::-moz-range-thumb {
+.sliderSection .drivingSection_top .drivingSection_slider input[type=range]::-moz-range-thumb {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -259,7 +298,7 @@ header .header_menu .header_right .header_search img {
   background: #d90000;
   cursor: pointer;
 }
-.drivingSection .drivingSection_top .drivingSection_slider .drivingSection_mark {
+.sliderSection .drivingSection_top .drivingSection_slider .drivingSection_mark {
   position: absolute;
   top: -28px;
   left: -57px;
@@ -271,7 +310,7 @@ header .header_menu .header_right .header_search img {
   font-weight: 600;
   line-height: 1.4;
 }
-.drivingSection .drivingSection_top .drivingSection_slider .drivingSection_mark::after {
+.sliderSection .drivingSection_top .drivingSection_slider .drivingSection_mark::after {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -282,22 +321,31 @@ header .header_menu .header_right .header_search img {
   border-top: 5px solid #111;
 }
 @media (max-width: 600px) {
-  .drivingSection .drivingSection_top .drivingSection_slider .drivingSection_mark {
+  .sliderSection .drivingSection_top .drivingSection_slider .drivingSection_mark {
     font-size: 7px;
     top: -16px;
     padding: 6px 8px;
     left: -38px;
   }
 }
-.drivingSection .drivingSection_top .drivingSection_slider .drivingSection_labels {
+.sliderSection .drivingSection_top .drivingSection_slider .drivingSection_labels {
   display: flex;
   justify-content: space-between;
   margin-top: 8px;
 }
-.drivingSection .drivingSection_top .drivingSection_slider .drivingSection_labels span {
+.sliderSection .drivingSection_top .drivingSection_slider .drivingSection_labels span {
   font-size: 16px;
   line-height: 1.4;
   color: #222;
+}
+@media (max-width: 600px) {
+  .sliderSection .drivingSection_top .drivingSection_slider .drivingSection_labels span {
+    font-size: 14px;
+  }
+}
+
+.drivingSection {
+  padding: 0 0 68px 0;
 }
 .drivingSection .drivingSection_comparison {
   padding: 56px 0 0 0;
@@ -728,6 +776,250 @@ footer .footer_container .footer_social .honda_global .privacy {
   .vehicleModal h2 {
     font-size: 25px;
   }
+}
+
+.comparisonSection .comparison_top {
+  display: grid;
+  grid-template-columns: 206px auto;
+}
+@media (max-width: 1100px) {
+  .comparisonSection .comparison_top {
+    grid-template-columns: 100%;
+  }
+}
+.comparisonSection .comparison_top .similar_toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 1100px) {
+  .comparisonSection .comparison_top .similar_toggle {
+    margin-bottom: 70px;
+  }
+}
+.comparisonSection .comparison_top .similar_toggle p {
+  color: #000;
+  font-size: 16px;
+}
+.comparisonSection .comparison_top .similar_toggle .switch {
+  position: relative;
+  width: 23px;
+  height: 13px;
+  display: inline-block;
+}
+.comparisonSection .comparison_top .similar_toggle .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.comparisonSection .comparison_top .similar_toggle .switch .switch__slider {
+  position: absolute;
+  inset: 0;
+  background: #dedede;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.comparisonSection .comparison_top .similar_toggle .switch .switch__slider::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: 2px;
+  top: 2px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.comparisonSection .comparison_top .vehicle_cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 850px) {
+  .comparisonSection .comparison_top .vehicle_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .comparisonSection .comparison_top .vehicle_cards {
+    grid-template-columns: 1fr;
+  }
+}
+.comparisonSection .comparison_top .vehicle_cards .vehicle_card {
+  position: relative;
+  min-height: 348px;
+  height: 100%;
+  width: 100%;
+  border-right: 2px solid #f7f7f7;
+}
+.comparisonSection .comparison_top .vehicle_cards .vehicle_card:last-child {
+  border-right: none;
+}
+@media (max-width: 850px) {
+  .comparisonSection .comparison_top .vehicle_cards .vehicle_card:nth-child(2) {
+    border-right: none;
+  }
+}
+@media (max-width: 500px) {
+  .comparisonSection .comparison_top .vehicle_cards .vehicle_card {
+    border-right: none;
+    border-bottom: 2px solid #f7f7f7;
+  }
+}
+.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicleCard_winner {
+  background: #CC0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 13px 0;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+}
+.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicleCard_winner img {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+}
+.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicleCard_winner p {
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicleCard_close {
+  outline: none;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicleCard_close button {
+  border: 0;
+  background: transparent;
+}
+.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicleCard_close button img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicle_detail {
+  padding: 64px 40px 24px;
+}
+.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicle_detail .vehicleCard_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicle_detail h2 {
+  color: #000;
+  text-align: center;
+  font-size: 29px;
+  letter-spacing: 1%;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicle_detail .vehicleCard_select select {
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  background: #f7f7f7;
+}
+.comparisonSection .comparison_top .vehicle_cards .vehicleCard_active {
+  background: #f7f7f7;
+}
+.comparisonSection .comparison_top .vehicle_cards .vehicleCard_active .vehicle_detail .vehicleCard_select select {
+  background: #fff;
+}
+.comparisonSection .vehicleCard_active {
+  background: #f7f7f7;
+}
+.comparisonSection .quickCost .quickCost_header {
+  padding: 14px 16px;
+  background: #E0E0E1;
+}
+.comparisonSection .quickCost .quickCost_header h5 {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+.comparisonSection .quickCost .quickCost_row {
+  color: #000;
+  display: grid;
+  grid-template-columns: 206px auto;
+}
+@media (max-width: 1100px) {
+  .comparisonSection .quickCost .quickCost_row {
+    grid-template-columns: 100%;
+  }
+}
+.comparisonSection .quickCost .quickCost_row .quickCost_label {
+  padding: 40px 0;
+  padding-left: 16px;
+  padding-right: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.comparisonSection .quickCost .quickCost_row .quickCost_label h4 {
+  font-size: 20px;
+  color: #000;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.comparisonSection .quickCost .quickCost_row .quickCost_label a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comparisonSection .quickCost .quickCost_row .quickCost_label a img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.comparisonSection .quickCost .quickCost_row .quickCost_right {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 850px) {
+  .comparisonSection .quickCost .quickCost_row .quickCost_right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .comparisonSection .quickCost .quickCost_row .quickCost_right {
+    grid-template-columns: 1fr;
+  }
+}
+.comparisonSection .quickCost .quickCost_row .quickCost_right .quickCost_value {
+  text-align: center;
+  padding: 40px 0;
+  border-right: 2px solid #f7f7f7;
+}
+.comparisonSection .quickCost .quickCost_row .quickCost_right .quickCost_value:last-child {
+  border-right: none;
+}
+@media (max-width: 850px) {
+  .comparisonSection .quickCost .quickCost_row .quickCost_right .quickCost_value:nth-child(2) {
+    border-right: none;
+  }
+}
+@media (max-width: 500px) {
+  .comparisonSection .quickCost .quickCost_row .quickCost_right .quickCost_value {
+    border-right: none;
+    border-bottom: 2px solid #f7f7f7;
+  }
+}
+.comparisonSection .quickCost .quickCost_row .quickCost_right .quickCost_value h4 {
+  font-size: 32px;
+  color: #000;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.comparisonSection .quickCost .quickCost_row .quickCost_right .quickCost_value h4 span {
+  font-size: 18px;
+  font-weight: 300;
+  padding-right: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */
