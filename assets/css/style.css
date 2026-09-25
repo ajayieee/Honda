@@ -232,7 +232,7 @@ header .header_menu .header_right .hamburger span {
 }
 
 .sliderSection {
-  padding: 68px 0;
+  padding-top: 68px;
 }
 .sliderSection .drivingSection_top {
   display: flex;
@@ -345,7 +345,7 @@ header .header_menu .header_right .hamburger span {
 }
 
 .drivingSection {
-  padding: 0 0 68px 0;
+  padding: 68px 0;
 }
 .drivingSection .drivingSection_comparison {
   padding: 56px 0 0 0;
@@ -778,41 +778,61 @@ footer .footer_container .footer_social .honda_global .privacy {
   }
 }
 
-.comparisonSection .comparison_top {
-  display: grid;
-  grid-template-columns: 206px auto;
+body {
+  color: #000;
 }
-@media (max-width: 1100px) {
-  .comparisonSection .comparison_top {
-    grid-template-columns: 100%;
-  }
+
+.vehicle-card_active {
+  background: #f7f7f7;
 }
-.comparisonSection .comparison_top .similar_toggle {
+
+.vehicle-comparison {
+  padding: 68px 0;
+}
+.vehicle-comparison .vehicle-comparison__scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-top: 50px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.vehicle-comparison .vehicle-comparison__scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.vehicle-comparison .vehicle-comparison__scroll::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+.vehicle-comparison .vehicle-comparison__scroll::-webkit-scrollbar-thumb {
+  background: #c8c8c8;
+  border-radius: 10px;
+}
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .comparison-label .similar-items {
+  width: 210px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 @media (max-width: 1100px) {
-  .comparisonSection .comparison_top .similar_toggle {
+  .vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .comparison-label .similar-items {
     margin-bottom: 70px;
   }
 }
-.comparisonSection .comparison_top .similar_toggle p {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .comparison-label .similar-items p {
   color: #000;
   font-size: 16px;
 }
-.comparisonSection .comparison_top .similar_toggle .switch {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .comparison-label .similar-items .switch {
   position: relative;
   width: 23px;
   height: 13px;
   display: inline-block;
 }
-.comparisonSection .comparison_top .similar_toggle .switch input {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .comparison-label .similar-items .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-.comparisonSection .comparison_top .similar_toggle .switch .switch__slider {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .comparison-label .similar-items .switch .switch__slider {
   position: absolute;
   inset: 0;
   background: #dedede;
@@ -820,7 +840,7 @@ footer .footer_container .footer_social .honda_global .privacy {
   cursor: pointer;
   transition: 0.2s;
 }
-.comparisonSection .comparison_top .similar_toggle .switch .switch__slider::before {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .comparison-label .similar-items .switch .switch__slider::before {
   content: "";
   position: absolute;
   width: 9px;
@@ -831,42 +851,17 @@ footer .footer_container .footer_social .honda_global .privacy {
   border-radius: 50%;
   transition: 0.2s;
 }
-.comparisonSection .comparison_top .vehicle_cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-@media (max-width: 850px) {
-  .comparisonSection .comparison_top .vehicle_cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 500px) {
-  .comparisonSection .comparison_top .vehicle_cards {
-    grid-template-columns: 1fr;
-  }
-}
-.comparisonSection .comparison_top .vehicle_cards .vehicle_card {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .vehicle-card {
   position: relative;
-  min-height: 348px;
   height: 100%;
-  width: 100%;
+  min-width: 240px;
   border-right: 2px solid #f7f7f7;
+  padding: 64px 30px 24px;
 }
-.comparisonSection .comparison_top .vehicle_cards .vehicle_card:last-child {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .vehicle-card:last-child {
   border-right: none;
 }
-@media (max-width: 850px) {
-  .comparisonSection .comparison_top .vehicle_cards .vehicle_card:nth-child(2) {
-    border-right: none;
-  }
-}
-@media (max-width: 500px) {
-  .comparisonSection .comparison_top .vehicle_cards .vehicle_card {
-    border-right: none;
-    border-bottom: 2px solid #f7f7f7;
-  }
-}
-.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicleCard_winner {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .vehicle-card .vehicle-card__winner {
   background: #CC0000;
   display: flex;
   align-items: center;
@@ -877,41 +872,37 @@ footer .footer_container .footer_social .honda_global .privacy {
   top: -50px;
   left: 0;
   width: 100%;
+  z-index: 9999;
 }
-.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicleCard_winner img {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .vehicle-card .vehicle-card__winner img {
   width: 23px;
   height: 23px;
   object-fit: contain;
 }
-.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicleCard_winner p {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .vehicle-card .vehicle-card__winner p {
   color: #fff;
   font-size: 12px;
   text-transform: uppercase;
 }
-.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicleCard_close {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .vehicle-card .vehicle-card__close {
   outline: none;
   position: absolute;
   top: 15px;
   right: 10px;
-}
-.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicleCard_close button {
   border: 0;
   background: transparent;
 }
-.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicleCard_close button img {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .vehicle-card .vehicle-card__close img {
   width: 20px;
   height: 20px;
   object-fit: contain;
 }
-.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicle_detail {
-  padding: 64px 40px 24px;
-}
-.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicle_detail .vehicleCard_image img {
-  width: 100%;
-  height: 100%;
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .vehicle-card .vehicle_detail .vehicle-card__image img {
+  width: 200px;
+  height: auto;
   object-fit: contain;
 }
-.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicle_detail h2 {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .vehicle-card .vehicle_detail h3 {
   color: #000;
   text-align: center;
   font-size: 29px;
@@ -919,107 +910,121 @@ footer .footer_container .footer_social .honda_global .privacy {
   font-weight: 500;
   margin-bottom: 20px;
 }
-.comparisonSection .comparison_top .vehicle_cards .vehicle_card .vehicle_detail .vehicleCard_select select {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .vehicle-card .vehicle_detail .vehicle-card__select select {
   width: 100%;
   padding: 14px;
   border: 0;
   background: #f7f7f7;
 }
-.comparisonSection .comparison_top .vehicle_cards .vehicleCard_active {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .vehicle-card_active {
   background: #f7f7f7;
 }
-.comparisonSection .comparison_top .vehicle_cards .vehicleCard_active .vehicle_detail .vehicleCard_select select {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-header-row .vehicle-card_active .vehicle_detail .vehicle-card__select select {
   background: #fff;
 }
-.comparisonSection .vehicleCard_active {
-  background: #f7f7f7;
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion {
+  width: 100%;
 }
-.comparisonSection .quickCost .quickCost_header {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion summary {
+  width: 100%;
   padding: 14px 16px;
-  background: #E0E0E1;
-}
-.comparisonSection .quickCost .quickCost_header h5 {
-  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e0e0e1;
+  color: #111;
   font-size: 16px;
-  font-weight: 400;
+  line-height: 1.2;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
 }
-.comparisonSection .quickCost .quickCost_row {
-  color: #000;
-  display: grid;
-  grid-template-columns: 206px auto;
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion summary::-webkit-details-marker {
+  display: none;
 }
-@media (max-width: 1100px) {
-  .comparisonSection .quickCost .quickCost_row {
-    grid-template-columns: 100%;
-  }
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion summary::marker {
+  display: none;
 }
-.comparisonSection .quickCost .quickCost_row .quickCost_label {
-  padding: 40px 0;
-  padding-left: 16px;
-  padding-right: 44px;
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion summary .accordion-icon {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion summary .accordion-icon::before, .vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion summary .accordion-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 1px;
+  background: #222;
+  transform: translate(-50%, -50%);
+}
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion summary .accordion-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: transform 0.2s ease;
+}
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion[open] .accordion-icon::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion .accordion-content {
+  width: 100%;
+  padding: 0;
+  background: #fff;
+}
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion .accordion-content .inner-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion .accordion-content .inner-table .inner_label {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.comparisonSection .quickCost .quickCost_row .quickCost_label h4 {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion .accordion-content .inner-table .inner_label h4 {
   font-size: 20px;
-  color: #000;
-  font-weight: 400;
-  line-height: 1.2;
+  font-weight: 500;
 }
-.comparisonSection .quickCost .quickCost_row .quickCost_label a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.comparisonSection .quickCost .quickCost_row .quickCost_label a img {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion .accordion-content .inner-table .inner_label img {
   width: 24px;
   height: 24px;
   object-fit: contain;
 }
-.comparisonSection .quickCost .quickCost_row .quickCost_right {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion .accordion-content .inner-table td {
+  border-right: 1px solid #e5e5e5;
 }
-@media (max-width: 850px) {
-  .comparisonSection .quickCost .quickCost_row .quickCost_right {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 500px) {
-  .comparisonSection .quickCost .quickCost_row .quickCost_right {
-    grid-template-columns: 1fr;
-  }
-}
-.comparisonSection .quickCost .quickCost_row .quickCost_right .quickCost_value {
-  text-align: center;
-  padding: 40px 0;
-  border-right: 2px solid #f7f7f7;
-}
-.comparisonSection .quickCost .quickCost_row .quickCost_right .quickCost_value:last-child {
-  border-right: none;
-}
-@media (max-width: 850px) {
-  .comparisonSection .quickCost .quickCost_row .quickCost_right .quickCost_value:nth-child(2) {
-    border-right: none;
-  }
-}
-@media (max-width: 500px) {
-  .comparisonSection .quickCost .quickCost_row .quickCost_right .quickCost_value {
-    border-right: none;
-    border-bottom: 2px solid #f7f7f7;
-  }
-}
-.comparisonSection .quickCost .quickCost_row .quickCost_right .quickCost_value h4 {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion .accordion-content .inner-table td h4 {
   font-size: 32px;
   color: #000;
   font-weight: 400;
   line-height: 1.2;
+  font-weight: 300;
 }
-.comparisonSection .quickCost .quickCost_row .quickCost_right .quickCost_value h4 span {
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion .accordion-content .inner-table td h4 span {
   font-size: 18px;
   font-weight: 300;
   padding-right: 8px;
+}
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion .accordion-content .inner-table th,
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion .accordion-content .inner-table td {
+  padding: 40px 10px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion .accordion-content .inner-table th:last-child,
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion .accordion-content .inner-table td:last-child {
+  border-right: none;
+}
+.vehicle-comparison .vehicle-comparison__scroll .comparison-table .vehicle-detail-row .comparison-accordion .accordion-content .inner-table th {
+  text-align: left;
+  width: 210px;
+  border-left: 0;
+  text-align: left;
 }
 
 /*# sourceMappingURL=style.css.map */
